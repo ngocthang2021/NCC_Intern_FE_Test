@@ -9,7 +9,7 @@
 	flex-direction: column;
 
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
 	padding-top: 20px;
 
 	// Logo
@@ -17,6 +17,9 @@
 		margin-bottom: 30px;
 		& img {
 			object-fit: cover;
+			@include md {
+				transform: scale(0.8);
+			}
 		}
 	}
 
@@ -30,6 +33,9 @@
 
 		background-color: $bg-gray-color;
 
+		@include lg {
+			padding: 38px 10px;
+		}
 		&-heading {
 			margin-bottom: 18px;
 
@@ -51,9 +57,17 @@
 		gap: 50px;
 
 		max-width: 1510px;
+		@include md {
+			flex-direction: column;
+		}
 	}
 
 	&__post {
+		flex: 1;
+		@include md {
+			text-align: center;
+		}
+
 		&-title {
 			margin-bottom: 18px;
 
@@ -67,6 +81,10 @@
 			height: 128px;
 			margin-right: 16px;
 			float: left;
+			@include md {
+				float: unset;
+				margin: 0 auto 20px;
+			}
 		}
 		&-text {
 			font-size: 16px;

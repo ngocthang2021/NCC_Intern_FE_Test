@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+@mixin sm {
+	@media screen and (max-width: $sm-bp) {
+		@content;
+	}
+}
+@mixin md {
+	@media screen and (max-width: $md-bp) {
+		@content;
+	}
+}
+@mixin lg {
+	@media screen and (max-width: $lg-bp) {
+		@content;
+	}
+}
